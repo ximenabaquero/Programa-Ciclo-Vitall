@@ -13,15 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'coral': '#FF9999',
-                        'sage': '#A8C0B0',
-                        'sage-light': '#C8D9D0',
-                        'sage-dark': '#7A9B88',
+                        'coral': '#FF7F7F',
+                        'sage': '#91B49C',
+                        'sage-light': '#B8CCC0',
+                        'sage-dark': '#6B8E7D',
+                        'off-white': '#FAF7F2',
                     },
                     fontFamily: {
                         'poppins': ['Poppins', 'sans-serif'],
@@ -30,23 +34,21 @@
             }
         }
     </script>
-    
-    <style>
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
 </head>
 <body class="bg-white text-gray-800">
     
     <!-- Navigation -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold text-sage-dark">Programa Ciclo Vital</h1>
-                </div>
-                <div class="hidden md:flex space-x-8">
+            <div class="flex justify-between items-center py-3">
+                <a href="#inicio" class="flex items-center space-x-4">
+                    <div class="p-2 bg-white rounded-xl shadow-sm">
+                        <img src="./editadologo.png" alt="Programa Ciclo Vital" class="h-14 w-auto object-contain">
+                    </div>
+                    <span class="hidden sm:inline text-2xl font-bold text-sage-dark">Programa Ciclo Vital</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-coral transition">Inicio</a>
                     <a href="#problema" class="text-gray-700 hover:text-coral transition">Problema</a>
                     <a href="#solucion" class="text-gray-700 hover:text-coral transition">Solución</a>
                     <a href="#mercado" class="text-gray-700 hover:text-coral transition">Mercado</a>
@@ -60,124 +62,162 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-sage-light to-white py-20 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Programa Ciclo Vital
-            </h1>
-            <h2 class="text-2xl md:text-3xl text-sage-dark mb-8">
-                Un enfoque integral para el SOP y la regularidad menstrual
-            </h2>
-            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-                Transformando la salud femenina a través de un programa holístico que combina ciencia, tecnología y acompañamiento personalizado
-            </p>
-            <button class="bg-coral hover:bg-opacity-90 text-white font-semibold py-4 px-8 rounded-lg text-lg transition shadow-lg hover:shadow-xl transform hover:scale-105">
-                <svg class="inline-block w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
-                </svg>
-                Ver Video Pitch
-            </button>
+    <section id="inicio" class="bg-gradient-to-br from-off-white to-white py-20 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <!-- Left: Copy -->
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                    Ciclo Vital 2.0 – FemTech para el manejo integral del SOP
+                </h1>
+                <h2 class="text-xl md:text-2xl text-sage-dark mb-6">
+                    Es un protocolo digital, cíclico y personalizado para mujeres con SOP, basado en evidencia científica e IA.
+                </h2>
+                <p class="text-sm text-gray-600 mb-8">
+                    Video Pitch – Curso Funding Leaders – Universidad EAN
+                </p>
+                <a href="#finanzas" class="inline-flex items-center justify-center bg-coral hover:bg-opacity-90 text-white font-semibold py-4 px-8 rounded-lg text-lg transition shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m-4-4h8" />
+                    </svg>
+                    Ver propuesta financiera
+                </a>
+            </div>
+            <!-- Right: Illustration -->
+            <div class="relative" data-animate="fade-up">
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden transition-transform duration-500 hover:-translate-y-1 hover:shadow-3xl" style="aspect-ratio: 4/3;">
+                    <img src="./imagencicloprincipal.png"
+                         alt="Ciclo Vital - Protocolo SOP"
+                         class="h-full w-full object-cover">
+                </div>
+            </div>
         </div>
     </section>
 
+   
     <!-- Problem Section -->
     <section id="problema" class="py-16 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                El Problema
+                El problema: un trastorno infravalorado con impacto global
             </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-sage-light bg-opacity-30 p-8 rounded-lg">
-                    <div class="text-coral text-4xl mb-4">⚠️</div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Prevalencia del SOP</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        El Síndrome de Ovario Poliquístico (SOP) afecta entre el 6-12% de las mujeres en edad reproductiva, representando millones de mujeres sin acceso a tratamientos integrales y personalizados.
+            <div class="grid md:grid-cols-2 gap-8 items-start mb-12">
+                <div class="space-y-6 bg-gradient-to-br from-white via-off-white to-sage-light/30 rounded-2xl p-8 shadow-lg border border-sage-light" data-animate="fade-up">
+                    <div class="inline-flex items-center px-3 py-1 text-sm font-semibold text-coral bg-coral/10 rounded-full">
+                        SOP: la condición crónica más subdiagnosticada en mujeres jóvenes
+                    </div>
+                    <p class="text-lg text-gray-800 leading-relaxed">
+                        El <span class="font-semibold text-sage-dark">Síndrome de Ovario Poliquístico</span> alcanza a
+                        <span class="font-semibold text-coral">6–20 %</span> de las mujeres en edad fértil. Sin embargo,
+                        <span class="font-semibold text-coral">≈70 %</span> no recibe un diagnóstico oportuno, perdiendo años clave para intervenir los síntomas y preservar la fertilidad.
                     </p>
+                    <p class="text-lg text-gray-800 leading-relaxed">
+                        El SOP aumenta el riesgo cardiometabólico, endocrino y psicológico, impactando directamente la calidad de vida y la productividad. Su huella económica supera los
+                        <span class="font-semibold text-sage-dark">&gt;15.000 M USD/año</span> a nivel global.
+                    </p>
+                    <ul class="space-y-3 text-gray-800 text-base">
+                        <li class="flex items-start">
+                            <span class="text-coral mr-3 text-xl">•</span>
+                            <span>+60 % de probabilidad de ansiedad y depresión sin una intervención integral.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-coral mr-3 text-xl">•</span>
+                            <span>≈1,5 millones de DALYs/año atribuibles a complicaciones del SOP.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-coral mr-3 text-xl">•</span>
+                            <span>Tratamientos fragmentados y poco personalizados generan baja adherencia (&lt;35 %).</span>
+                        </li>
+                    </ul>
+                    <div class="flex items-center space-x-4 border-t border-sage-light pt-4">
+                        <span class="text-3xl font-bold text-coral">URGENTE</span>
+                        <p class="text-sm text-gray-600">
+                            Se necesita una plataforma clínica, holística y data-driven para romper este ciclo.
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-sage-light bg-opacity-30 p-8 rounded-lg">
-                    <div class="text-coral text-4xl mb-4">🔍</div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Falta de Enfoque Holístico</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Los tratamientos actuales se enfocan principalmente en síntomas individuales, sin considerar la complejidad del SOP que requiere un abordaje integral: nutrición, ejercicio, manejo del estrés y seguimiento médico.
-                    </p>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-sage-light" data-animate="fade-up">
+                    <img src="./problemaciclo.png"
+                         alt="Impacto del SOP - Programa Ciclo Vital"
+                         class="w-full h-full object-cover">
                 </div>
-                <div class="bg-sage-light bg-opacity-30 p-8 rounded-lg">
-                    <div class="text-coral text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Alto Costo de Tratamiento</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        El manejo del SOP requiere múltiples especialistas (endocrinólogo, nutricionista, psicólogo), generando costos elevados y fragmentación en la atención.
-                    </p>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-2xl font-bold text-coral mb-1">6–20%</div>
+                    <p class="text-sm text-gray-600">de mujeres en edad fértil</p>
                 </div>
-                <div class="bg-sage-light bg-opacity-30 p-8 rounded-lg">
-                    <div class="text-coral text-4xl mb-4">📱</div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Baja Adherencia</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        La falta de seguimiento personalizado y apoyo continuo resulta en bajas tasas de adherencia a los programas de tratamiento, limitando los resultados a largo plazo.
-                    </p>
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-2xl font-bold text-sage-dark mb-1">≈70%</div>
+                    <p class="text-sm text-gray-600">sin diagnóstico</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-2xl font-bold text-coral mb-1">+60%</div>
+                    <p class="text-sm text-gray-600">ansiedad y depresión</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-2xl font-bold text-sage-dark mb-1">&gt;15.000 M</div>
+                    <p class="text-sm text-gray-600">USD/año de carga total</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
-    <section id="solucion" class="py-16 px-4 bg-gradient-to-br from-white to-sage-light">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Nuestra Solución
-            </h2>
-            <div class="bg-white rounded-xl shadow-xl p-8 md:p-12 mb-8">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
-                    <strong class="text-coral">Programa Ciclo Vital</strong> es un programa integral de 12 semanas que combina:
-                </p>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <div class="bg-coral bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl">🥗</span>
-                        </div>
-                        <h4 class="font-semibold text-lg mb-2">Nutrición Personalizada</h4>
-                        <p class="text-gray-600 text-sm">Planes alimenticios diseñados específicamente para regular hormonas y mejorar la sensibilidad a la insulina</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-sage bg-opacity-30 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl">💪</span>
-                        </div>
-                        <h4 class="font-semibold text-lg mb-2">Ejercicio Adaptado</h4>
-                        <p class="text-gray-600 text-sm">Rutinas de ejercicio diseñadas para optimizar la función hormonal y metabólica</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-coral bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl">🧘</span>
-                        </div>
-                        <h4 class="font-semibold text-lg mb-2">Manejo del Estrés</h4>
-                        <p class="text-gray-600 text-sm">Técnicas de mindfulness y manejo emocional para regular el eje hormonal</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-sage bg-opacity-30 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl">👩‍⚕️</span>
-                        </div>
-                        <h4 class="font-semibold text-lg mb-2">Seguimiento Médico</h4>
-                        <p class="text-gray-600 text-sm">Monitoreo constante por equipo multidisciplinario de especialistas</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-coral bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl">📊</span>
-                        </div>
-                        <h4 class="font-semibold text-lg mb-2">Plataforma Digital</h4>
-                        <p class="text-gray-600 text-sm">App móvil para tracking de síntomas, ciclos y progreso</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-sage bg-opacity-30 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span class="text-3xl">👥</span>
-                        </div>
-                        <h4 class="font-semibold text-lg mb-2">Comunidad de Apoyo</h4>
-                        <p class="text-gray-600 text-sm">Grupos de soporte y talleres educativos semanales</p>
-                    </div>
-                </div>
+    <section id="solucion" class="py-20 px-4 bg-gradient-to-br from-sage-light/40 via-off-white to-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex items-center px-4 py-1 mb-6 text-sm font-semibold tracking-wide text-sage-dark bg-white/70 rounded-full shadow-sm">
+                ♀️ FemTech + Ciencia aplicada al SOP
             </div>
-            <div class="text-center">
-                <p class="text-lg text-gray-700 italic">
-                    "Un enfoque basado en evidencia que ha demostrado mejoras significativas en la regularidad menstrual, niveles hormonales y calidad de vida"
-                </p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Nuestra solución: <span class="text-coral">Ciclo Vital 2.0</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
+                Protocolo integral que sincroniza nutrición, movimiento, manejo del estrés y suplementación con cada fase del ciclo.
+                Combina app inteligente, coach clínico y comunidad gamificada para lograr adherencia &gt;90 % en 6 meses.
+            </p>
+        </div>
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-coral/15 flex items-center justify-center text-2xl">🤖</div>
+                    <h3 class="ml-3 text-xl font-semibold text-gray-900">IA en tiempo real</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Motor de personalización que aprende de glucosa, HRV, síntomas y fenotipo del SOP.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center text-2xl">🥗</div>
+                    <h3 class="ml-3 text-xl font-semibold text-gray-900">Nutrición cíclica</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Planes alimentarios por fase con recetas antiinflamatorias y seguimiento en app.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-coral/15 flex items-center justify-center text-2xl">🏃‍♀️</div>
+                    <h3 class="ml-3 text-xl font-semibold text-gray-900">Movimiento inteligente</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Rutinas adaptadas a las fases folicular, ovulatoria y lútea con recordatorios dinámicos.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center text-2xl">🧠</div>
+                    <h3 class="ml-3 text-xl font-semibold text-gray-900">Salud mental + biofeedback</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Respiración guiada, HRV y check-ins emocionales integrados con alertas de IA.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-coral/15 flex items-center justify-center text-2xl">👥</div>
+                    <h3 class="ml-3 text-xl font-semibold text-gray-900">Comunidad y gamificación</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Retos por equipos, insignias y mentoría entre pares certificada.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center text-2xl">📊</div>
+                    <h3 class="ml-3 text-xl font-semibold text-gray-900">Panel clínico</h3>
+                </div>
+                <p class="text-gray-600 text-sm">Dashboard para especialistas con métricas de adherencia, laboratorios y alertas.</p>
             </div>
         </div>
     </section>
@@ -185,140 +225,140 @@
     <!-- Market Section -->
     <section id="mercado" class="py-16 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Oportunidad de Mercado
-            </h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Mercado y oportunidad</h2>
+                <p class="mt-4 text-gray-600 text-lg">Validamos la demanda combinando métricas globales, femtech y comportamiento de usuarias.</p>
+            </div>
+
             <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-coral mb-2">$4.5B</div>
-                    <p class="text-gray-600">Mercado global de salud femenina digital (2024)</p>
+                <div class="text-center bg-off-white rounded-2xl shadow p-6 border border-sage-light/50">
+                    <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-sage-dark bg-white rounded-full mb-3">Tamaño del mercado</span>
+                    <div class="text-5xl font-bold text-coral mb-2">$49.3B</div>
+                    <p class="text-gray-700 text-base font-semibold mb-1">Mercado global de salud femenina (2024)</p>
+                    <p class="text-sm text-gray-600">CAGR 5.1 % &nbsp;|&nbsp; Fuente: Grand View Research</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-sage-dark mb-2">15%</div>
-                    <p class="text-gray-600">Crecimiento anual proyectado (CAGR)</p>
+                <div class="text-center bg-off-white rounded-2xl shadow p-6 border border-sage-light/50">
+                    <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-coral bg-white rounded-full mb-3">FemTech creciendo</span>
+                    <div class="text-4xl font-bold text-sage-dark mb-2">16–21 % CAGR</div>
+                    <p class="text-gray-700 text-base font-semibold mb-1">Crecimiento proyectado FemTech 2024–2034</p>
+                    <p class="text-sm text-gray-600">Fuentes: Precedence Research y Grand View Research</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-coral mb-2">200M+</div>
-                    <p class="text-gray-600">Mujeres afectadas por SOP globalmente</p>
+                <div class="text-center bg-off-white rounded-2xl shadow p-6 border border-sage-light/50">
+                    <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-sage-dark bg-white rounded-full mb-3">Oportunidad real</span>
+                    <div class="text-4xl font-bold text-coral mb-2">10M+ mujeres con SOP</div>
+                    <p class="text-gray-700 text-base font-semibold mb-1">Buscan soluciones integrales</p>
+                    <p class="text-sm text-gray-600">El 80 % está insatisfecha con apps actuales</p>
                 </div>
             </div>
-            <div class="bg-sage-light bg-opacity-30 rounded-lg p-8">
-                <h3 class="text-2xl font-semibold mb-6 text-gray-900">Mercado Objetivo</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="font-semibold text-lg mb-3 text-coral">Segmento Primario</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <span class="text-sage-dark mr-2">•</span>
-                                <span>Mujeres de 18-40 años con diagnóstico de SOP</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-sage-dark mr-2">•</span>
-                                <span>Nivel socioeconómico medio-alto</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-sage-dark mr-2">•</span>
-                                <span>Usuarias activas de tecnología de salud</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-lg mb-3 text-coral">Segmento Secundario</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <span class="text-sage-dark mr-2">•</span>
-                                <span>Mujeres con irregularidades menstruales</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-sage-dark mr-2">•</span>
-                                <span>Empresas (programas de bienestar corporativo)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-sage-dark mr-2">•</span>
-                                <span>Instituciones de salud y aseguradoras</span>
-                            </li>
-                        </ul>
-                    </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-sage-light">
+                    <img src="./graf4.jpeg" alt="Penetración FemTech" class="w-full h-full object-cover">
                 </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-sage-light">
+                    <img src="./graf1.jpeg" alt="Mercado SOP" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-sage-light">
+                    <img src="./graf2.jpeg" alt="Usuarios potenciales" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-sage-light">
+                    <img src="./graf3.jpeg" alt="Crecimiento apps" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-8 border border-sage-light">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Al menos 10 millones de mujeres con SOP buscan soluciones integrales. El 80 % está insatisfecha con apps genéricas que no abordan el manejo clínico ni el ciclo. Ciclo Vital se posiciona en el segmento premium y clínico, con oferta B2C y B2B en alianza con ginecólogos y endocrinólogos.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Business Model Section -->
-    <section id="modelo" class="py-16 px-4 bg-gradient-to-br from-sage-light to-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Modelo de Negocio
+    <section id="modelo" class="py-20 px-4 bg-gradient-to-br from-sage-light/60 via-off-white to-white">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <div class="inline-flex items-center px-4 py-1 text-sm font-semibold tracking-wide text-sage-dark bg-white/70 rounded-full shadow-sm">
+                💼 Flujo diversificado de ingresos
+            </div>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mt-4">
+                Modelo de negocio
             </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-coral">Fuentes de Ingreso</h3>
-                    <div class="space-y-4">
-                        <div class="border-l-4 border-coral pl-4">
-                            <h4 class="font-semibold text-lg mb-2">Programa Completo (B2C)</h4>
-                            <p class="text-gray-600">$1,200 - 12 semanas de programa integral con seguimiento personalizado</p>
-                        </div>
-                        <div class="border-l-4 border-sage-dark pl-4">
-                            <h4 class="font-semibold text-lg mb-2">Suscripción Mensual</h4>
-                            <p class="text-gray-600">$99/mes - Acceso continuo a plataforma y comunidad</p>
-                        </div>
-                        <div class="border-l-4 border-coral pl-4">
-                            <h4 class="font-semibold text-lg mb-2">Programas Corporativos (B2B)</h4>
-                            <p class="text-gray-600">Contratos anuales con empresas para beneficios de empleadas</p>
-                        </div>
-                        <div class="border-l-4 border-sage-dark pl-4">
-                            <h4 class="font-semibold text-lg mb-2">Alianzas con Aseguradoras</h4>
-                            <p class="text-gray-600">Cobertura parcial o total del programa</p>
-                        </div>
+            <p class="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+                Tres motores de monetización que combinan suscripción directa, alianzas clínicas y partnerships con marcas alineadas al protocolo.
+            </p>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-coral bg-coral/10 rounded-full mb-4">B2C</span>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Suscripción Premium</h3>
+                <p class="text-4xl font-extrabold text-coral mb-1">USD 9,99</p>
+                <p class="text-sm text-gray-500 mb-4">por usuaria / mes</p>
+                <ul class="space-y-2 text-gray-700 text-sm">
+                    <li class="flex"><span class="text-coral mr-2">•</span><span>Acceso completo al protocolo y app.</span></li>
+                    <li class="flex"><span class="text-coral mr-2">•</span><span>Comunidad premium y coaching grupal.</span></li>
+                    <li class="flex"><span class="text-coral mr-2">•</span><span>Contenido exclusivo y retos gamificados.</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-sage-dark bg-sage/15 rounded-full mb-4">B2B</span>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Clínicas y especialistas</h3>
+                <ul class="space-y-3 text-gray-700 text-sm">
+                    <li class="flex"><span class="text-sage-dark mr-2">•</span><span>Licenciamiento white-label para clínicas de fertilidad, ginecología y endocrinología.</span></li>
+                    <li class="flex"><span class="text-sage-dark mr-2">•</span><span>Programas co-brandeados con data dashboards y soporte clínico.</span></li>
+                    <li class="flex"><span class="text-sage-dark mr-2">•</span><span>Revenue share por pacientes referidas.</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-sage-light/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-coral bg-coral/10 rounded-full mb-4">Partners</span>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Afiliados y suplementos</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                    Ingresos por alianzas con marcas de suplementos/servicios alineados al protocolo.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto mt-16 flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/3 rounded-3xl overflow-hidden shadow-2xl border border-sage-light">
+                <img src="./foda.png" alt="Análisis FODA" class="w-full h-full object-contain bg-white p-4">
+            </div>
+            <div class="w-full md:w-2/3 bg-white rounded-3xl shadow-xl p-8 border border-sage-light">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Análisis FODA</h3>
+                <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-700">
+                    <div>
+                        <h4 class="font-semibold text-sage-dark mb-2">Fortalezas (F)</h4>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>Protocolo evidence-based (inositol + cíclico).</li>
+                            <li>IA personalizada (HRV, glucosa).</li>
+                            <li>Equipo women-led con foco en salud y energías.</li>
+                            <li>Adherencia &gt; 90 % mediante gamificación.</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-sage-dark">Ventajas Competitivas</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-coral bg-opacity-20 rounded-full p-2 mr-4 mt-1">
-                                <svg class="w-5 h-5 text-coral" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Enfoque Integral</h4>
-                                <p class="text-gray-600 text-sm">Único programa que combina todos los pilares de tratamiento</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-sage bg-opacity-30 rounded-full p-2 mr-4 mt-1">
-                                <svg class="w-5 h-5 text-sage-dark" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Tecnología Propia</h4>
-                                <p class="text-gray-600 text-sm">Plataforma con IA para personalización y seguimiento</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-coral bg-opacity-20 rounded-full p-2 mr-4 mt-1">
-                                <svg class="w-5 h-5 text-coral" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Equipo Multidisciplinario</h4>
-                                <p class="text-gray-600 text-sm">Profesionales especializados en salud femenina</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-sage bg-opacity-30 rounded-full p-2 mr-4 mt-1">
-                                <svg class="w-5 h-5 text-sage-dark" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Resultados Medibles</h4>
-                                <p class="text-gray-600 text-sm">Métricas claras de éxito y mejora</p>
-                            </div>
-                        </div>
+                    <div>
+                        <h4 class="font-semibold text-sage-dark mb-2">Oportunidades (O)</h4>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>Mercado FemTech: 60B USD en 2025.</li>
+                            <li>10M mujeres con SOP insatisfechas.</li>
+                            <li>Partnerships B2B con clínicas en LATAM.</li>
+                            <li>Grants de sostenibilidad.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-coral mb-2">Debilidades (D)</h4>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>Equipo pequeño (3 FTE iniciales).</li>
+                            <li>Dependencia de funding inicial.</li>
+                            <li>Curva UX para usuarias no-tech.</li>
+                            <li>Beta limitada a Android.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-coral mb-2">Amenazas (A)</h4>
+                        <ul class="space-y-1 list-disc list-inside">
+                            <li>Regulaciones estrictas (AI Act EU).</li>
+                            <li>Competencia consolidada (Clue, Flo).</li>
+                            <li>Riesgo de ciberataques en health data.</li>
+                            <li>Cambios en algoritmos de Meta/TikTok.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -329,79 +369,49 @@
     <section id="finanzas" class="py-16 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Propuesta Financiera
+                Nuestra propuesta financiera para inversionistas
             </h2>
+
             <div class="bg-gradient-to-br from-sage-light to-white rounded-xl shadow-xl p-8 md:p-12 mb-8">
-                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-900">Proyecciones a 3 Años</h3>
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <div class="text-center bg-white rounded-lg p-6 shadow">
-                        <div class="text-sm text-gray-500 mb-2">Año 1</div>
-                        <div class="text-3xl font-bold text-coral mb-2">$500K</div>
-                        <div class="text-sm text-gray-600">500 pacientes</div>
-                    </div>
-                    <div class="text-center bg-white rounded-lg p-6 shadow">
-                        <div class="text-sm text-gray-500 mb-2">Año 2</div>
-                        <div class="text-3xl font-bold text-sage-dark mb-2">$2.5M</div>
-                        <div class="text-sm text-gray-600">2,000 pacientes</div>
-                    </div>
-                    <div class="text-center bg-white rounded-lg p-6 shadow">
-                        <div class="text-sm text-gray-500 mb-2">Año 3</div>
-                        <div class="text-3xl font-bold text-coral mb-2">$8M</div>
-                        <div class="text-sm text-gray-600">6,000 pacientes</div>
-                    </div>
-                </div>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Buscamos una inversión semilla de <span class="font-semibold text-coral">USD 500.000</span> a cambio de
+                    <span class="font-semibold">≈15 % de equity</span>. El horizonte estimado es de <span class="font-semibold">5 años</span>
+                    para ejecutar la estrategia B2C/B2B y consolidar alianzas clave.
+                </p>
+
                 <div class="grid md:grid-cols-2 gap-8">
                     <div>
-                        <h4 class="text-xl font-semibold mb-4 text-coral">Uso de Inversión</h4>
-                        <ul class="space-y-3">
-                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <span class="text-gray-700">Desarrollo de plataforma tecnológica</span>
-                                <span class="font-semibold text-gray-900">40%</span>
-                            </li>
-                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <span class="text-gray-700">Marketing y adquisición de clientes</span>
-                                <span class="font-semibold text-gray-900">30%</span>
-                            </li>
-                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <span class="text-gray-700">Contratación de equipo médico</span>
-                                <span class="font-semibold text-gray-900">20%</span>
-                            </li>
-                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <span class="text-gray-700">Operaciones y administración</span>
-                                <span class="font-semibold text-gray-900">10%</span>
-                            </li>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Uso de fondos</h3>
+                        <ul class="space-y-3 text-gray-700 text-sm">
+                            <li class="flex justify-between"><span>Desarrollo de app e IA</span><span class="font-semibold text-gray-900">40 %</span></li>
+                            <li class="flex justify-between"><span>Marketing y adquisición de usuarias</span><span class="font-semibold text-gray-900">30 %</span></li>
+                            <li class="flex justify-between"><span>Operaciones y equipo clave</span><span class="font-semibold text-gray-900">20 %</span></li>
+                            <li class="flex justify-between"><span>Cumplimiento regulatorio y protección de datos</span><span class="font-semibold text-gray-900">10 %</span></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-xl font-semibold mb-4 text-sage-dark">Ronda de Inversión</h4>
-                        <div class="bg-white rounded-lg p-6 shadow-md">
-                            <div class="mb-4">
-                                <div class="text-4xl font-bold text-coral mb-2">$1.5M</div>
-                                <div class="text-gray-600">Buscando en Serie Seed</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Indicadores clave</h3>
+                        <div class="bg-white rounded-lg p-6 shadow-md border border-sage-light text-sm">
+                            <div class="flex justify-between mb-3">
+                                <span class="text-gray-600">ROI estimado (5 años)</span>
+                                <span class="font-semibold text-gray-900">≈560 %</span>
                             </div>
-                            <div class="space-y-2 text-sm">
-                                <div class="flex justify-between">
-                                    <span class="text-gray-600">Valoración Pre-money:</span>
-                                    <span class="font-semibold">$5M</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-gray-600">Tipo de inversión:</span>
-                                    <span class="font-semibold">Equity</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-gray-600">Runway esperado:</span>
-                                    <span class="font-semibold">18-24 meses</span>
-                                </div>
+                            <div class="flex justify-between mb-3">
+                                <span class="text-gray-600">TIR</span>
+                                <span class="font-semibold text-gray-900">≈46 % anual</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">VAN (tasa 25 %)</span>
+                                <span class="font-semibold text-sage-dark">Positivo</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center">
-                <p class="text-lg text-gray-700">
-                    <strong>ROI proyectado:</strong> 5x en 5 años | <strong>Break-even:</strong> Mes 18
-                </p>
-            </div>
+
+            <p class="text-lg text-gray-700 text-center">
+                “Esta propuesta financiera busca un equilibrio entre crecimiento agresivo, control del riesgo y sostenibilidad de largo plazo.”
+            </p>
         </div>
     </section>
 
@@ -496,7 +506,7 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-lg mb-1">Teléfono</h4>
-                            <a href="tel:+1234567890" class="text-sage-dark hover:text-coral transition">+1 (234) 567-890</a>
+                            <a href="tel:+57 3242876534" class="text-sage-dark hover:text-coral transition">+1 (234) 567-890</a>
                         </div>
                     </div>
                 </div>
@@ -537,7 +547,7 @@
                 <a href="#" class="text-gray-400 hover:text-coral transition">Instagram</a>
                 <a href="#" class="text-gray-400 hover:text-coral transition">Twitter</a>
             </div>
-            <p class="text-sm text-gray-500">&copy; 2024 Programa Ciclo Vital. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-500">&copy; 2025 Programa Ciclo Vital. Todos los derechos reservados.</p>
         </div>
     </footer>
 
